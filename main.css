@@ -186,9 +186,6 @@ DECLARATION BUTTON
   background-image: linear-gradient(135deg, rgba(255, 0, 0, 0) 0%, rgba(26, 11, 241, 0.918) 50%, rgba(0, 255, 149, 0.589) 100%);
 }
 }
-<<<<<<< HEAD
-@media(max-width:1130px)
-=======
 li{
   
  
@@ -250,7 +247,6 @@ li:hover {
 
 
   @media(max-width:1130px)
->>>>>>> add contact form not responsible
 {
  .container .box .text {
     position: relative;
@@ -261,14 +257,11 @@ li:hover {
   .button{
     font-size:4em;
   }
-<<<<<<< HEAD
-=======
   li{
     font-size: 15%;
     
   }
 
->>>>>>> add contact form not responsible
 
 }
 
@@ -281,8 +274,6 @@ li:hover {
   .container .box {
     width: 400px;
   }
-<<<<<<< HEAD
-=======
 
   li{
     font-size: 5px;
@@ -290,7 +281,6 @@ li:hover {
 
     
   }
->>>>>>> add contact form not responsible
 }
 @media (max-width :768px) {
   .container {
@@ -329,41 +319,7 @@ li:hover {
 
 }
 
-<<<<<<< HEAD
-.information li{
-  display: flex;
-  box-sizing: content-box;
-  align-self: center;
-  list-style:none;
-  display:inline;
-  font-weight:2em;
-  color:black;
-  border: 3px solid blue;
-  border-radius: 12%;
-  transition: .5s;
-  margin: 2em;
-  justify-content: space-around;
-}
-
- li:hover {
-  color: lightblue;
-  background-image: url(https://image.freepik.com/vecteurs-libre/style-bande-dessinee-fond-abstack-bigbamm-lumiere-du-soleil_68708-513.jpg);
-  border: 3px solid #fff;
-  transition: .4s;
-
-}
-
-.information {
-  margin-bottom: 2em;
-  display: flex;
-  justify-content: center;
-  font-family: "FontAwesome";
-  
-  
-}
-=======
 form{
   width: 80%;
   margin:5px 10px 10px 5px;
 }
->>>>>>> add contact form not responsible
