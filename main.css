@@ -1,0 +1,369 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Lemonada', cursive;
+ 
+  
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg,#1a2a6c, #22c1c3 ,#2948ff,violet);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  min-height: 100vh;
+}
+.container {
+  position: relative;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+.box {
+  position: relative;
+  height: 25vw;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 15px 5px rgba(223, 220, 230, 0.918);
+  width: 25vw;
+  margin: 15px ;
+}
+.box::after
+{
+  padding-bottom: 100%;
+} 
+ .imgBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #036288fa;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  transition: .5s ease-in-out;
+
+}
+ .box:hover .imgBox {
+  width: 100px;
+  height: 100px;
+  left: -75px;
+  top: 40px;
+ 
+  transition: .5s ease-in-out;
+  background-color:rgba(0, 217, 255, 0.603);
+   
+}
+.imgBox ::before {
+  content: attr(data-text);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-style: 5em;
+  font-weight: 700; 
+}
+
+img {
+  max-width: 100px;
+  transition: .5s ease-in-out;
+}
+.box:hover .imgBox img {
+  max-width: 75px;
+}
+
+.text {
+  word-break: break-all;
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+   padding: 2px 4px 5px;
+   flex-grow: 1;
+
+
+-webkit-box-shadow: inset 0px 0px 28px 5px rgba(0, 217, 255, 0.445);
+-moz-box-shadow: inset 0px 0px 28px 5px rgba(0, 217, 255, 0.445);
+box-shadow: inset 0px 0px 28px 5px  rgba(0, 217, 255, 0.445);
+
+}
+
+ h4  {
+  margin-bottom: 10px;
+  font-size: 25px;
+  align-self: center;
+}
+
+
+
+p {
+display: flex;
+overflow-x: hidden;
+overflow-y: auto;
+padding: 10px 20px 5px;
+font-size:15px;
+text-align:center;
+width: 100%;
+flex-grow: 1;
+min-height: 0;
+}
+
+
+button {
+margin-top: 1em;
+margin-right: 1em;;
+display:flex;
+align-self: flex-end;
+border-radius:12%;
+padding: 4px;
+border: 0px solid #000;
+animation: colorMove 10000ms infinite ease-in;
+font-size: small;
+ 
+}
+button:hover,
+button:focus {
+animation: borderButtom 500ms infinite ease-out, colorMove 10000ms infinite ease-in, hoverMove 200ms;
+}
+/*
+DECLARATION BUTTON COLOR
+*/
+@keyframes colorMove {
+0%, 100% {
+    background: #00a5e69f;
+}
+33% {
+  background: #ac6cff;
+}
+66%{
+  background: #01fdfd65;
+}
+}
+
+/*
+DECLARATION BUTTON BORDER
+*/
+@keyframes borderButtom {
+0% {
+  box-shadow: inset 0px 0px 0px 5px rgba(0, 255, 242, 0.562), 0px 0px 0px 0px rgba(255, 255, 255, 0.671);
+}
+100% {
+  box-shadow: inset 0px 0px 0px 3px rgba(132, 0, 255, 0.473), 0px 0px 0px 10px rgba(255,255,255,0);
+}
+}
+
+/*
+DECLARATION BACKGROUND
+*/
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/*
+DECLARATION BUTTON
+*/
+@keyframes hoverMove {
+0%{
+  background-image: linear-gradient(135deg, rgba(255, 2, 2, 0.5) 0%, rgb(1, 69, 255) 50%, rgba(12, 245, 63, 0.616) 100%);
+}
+50%{
+  background-image: linear-gradient(135deg, rgba(255, 2, 2, 0) 0%, rgb(4, 0, 255) 50%, rgba(38, 209, 23, 0.301) 100%);
+}
+100%{
+  background-image: linear-gradient(135deg, rgba(255, 0, 0, 0) 0%, rgba(26, 11, 241, 0.918) 50%, rgba(0, 255, 149, 0.589) 100%);
+}
+}
+<<<<<<< HEAD
+@media(max-width:1130px)
+=======
+li{
+  
+ 
+  list-style:none;
+  display:inline-flex;
+  padding: 6px;
+ 
+  color:black;
+  border: 3px solid blue;
+  border-radius: 40%;
+  transition: .5s;
+    
+}
+
+li:hover {
+  color: lightblue;
+  background-image: url(https://image.freepik.com/vecteurs-libre/style-bande-dessinee-fond-abstack-bigbamm-lumiere-du-soleil_68708-513.jpg);
+  border: 3px solid #fff;
+  transition: .4s;
+
+}
+
+.information {
+  justify-content: space-around;
+  margin-bottom: 2em;
+  display: flex;
+  justify-content: center;
+  font-family: "FontAwesome";
+  box-sizing: content-box;
+  
+  
+}
+
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 50%;
+  }
+  
+  ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 10px rgba(2, 206, 233, 0.575);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+  border-radius: 15%;
+  background: rgba(3, 89, 248, 0.164); 
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+  background: #008cff70;
+  }
+
+  label{
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  @media(max-width:1130px)
+>>>>>>> add contact form not responsible
+{
+ .container .box .text {
+    position: relative;
+    font-size:5em;
+    left:10px;
+    width: 100%;
+  }
+  .button{
+    font-size:4em;
+  }
+<<<<<<< HEAD
+=======
+  li{
+    font-size: 15%;
+    
+  }
+
+>>>>>>> add contact form not responsible
+
+}
+
+@media (max-width :992px) {
+  .container {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container .box {
+    width: 400px;
+  }
+<<<<<<< HEAD
+=======
+
+  li{
+    font-size: 5px;
+
+
+    
+  }
+>>>>>>> add contact form not responsible
+}
+@media (max-width :768px) {
+  .container {
+    max-width: 320px;
+    
+
+  }
+   
+    .box:hover .imgBox {
+    width: 120px;
+    height: 100px;
+    left: -60px;
+    max-width: 100%;
+   
+  }
+  
+    .text {
+      display: flex;
+      flex-direction: column;
+      
+    
+  }
+  .button{
+    font-size:4em;
+  }
+}
+@media(max-width:550){
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  
+}
+
+
+}
+
+<<<<<<< HEAD
+.information li{
+  display: flex;
+  box-sizing: content-box;
+  align-self: center;
+  list-style:none;
+  display:inline;
+  font-weight:2em;
+  color:black;
+  border: 3px solid blue;
+  border-radius: 12%;
+  transition: .5s;
+  margin: 2em;
+  justify-content: space-around;
+}
+
+ li:hover {
+  color: lightblue;
+  background-image: url(https://image.freepik.com/vecteurs-libre/style-bande-dessinee-fond-abstack-bigbamm-lumiere-du-soleil_68708-513.jpg);
+  border: 3px solid #fff;
+  transition: .4s;
+
+}
+
+.information {
+  margin-bottom: 2em;
+  display: flex;
+  justify-content: center;
+  font-family: "FontAwesome";
+  
+  
+}
+=======
+form{
+  width: 80%;
+  margin:5px 10px 10px 5px;
+}
+>>>>>>> add contact form not responsible
